@@ -1,3 +1,3 @@
 # signup_login
 
-"A new Flutter project."
+A re-usable singup and login page for every purpose using Flutter.

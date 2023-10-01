@@ -1,6 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
+import 'package:signup_login/Screens/Login/login_screen.dart';
 import 'package:signup_login/Screens/Welcome/components/background.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:signup_login/components/rounded_button.dart';
@@ -22,15 +23,28 @@ class Body extends StatelessWidget {
               "Welcome!",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: size.height * 0.03,),
+            SizedBox(
+              height: size.height * 0.03,
+            ),
             SvgPicture.asset(
               "assets/icons/chat.svg",
               height: size.height * 0.45,
             ),
-            SizedBox(height: size.height * 0.05,),
+            SizedBox(
+              height: size.height * 0.05,
+            ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
+              },
             ),
             RoundedButton(
               text: "LOGIN",

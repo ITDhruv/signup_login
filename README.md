@@ -1,3 +1,3 @@
-# signup_login
+# Welcome_signup_login
 
-A re-usable singup and login page for every purpose using Flutter.
+An aesthetic re-usable signup and login page for every purpose using Flutter.

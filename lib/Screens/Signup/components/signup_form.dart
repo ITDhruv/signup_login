@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:signup_login/Screens/Signup/sign_up_screen.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
-// import '../../Signup/sign_up_screen.dart';
+import '../../Login/login_screen.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
     Key? key,
   }) : super(key: key);
 
@@ -23,10 +22,7 @@ class LoginForm extends StatelessWidget {
               hintText: "Your email",
               prefixIcon: Padding(
                 padding: EdgeInsets.all(defaultPadding),
-                child: Icon(
-                  Icons.person,
-                  color: kPrimaryColor,
-                ),
+                child: Icon(Icons.person, color: kPrimaryColor,),
               ),
             ),
           ),
@@ -40,32 +36,25 @@ class LoginForm extends StatelessWidget {
                 hintText: "Your password",
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(defaultPadding),
-                  child: Icon(
-                    Icons.lock,
-                    color: kPrimaryColor,
-                  ),
+                  child: Icon(Icons.lock, color: kPrimaryColor,),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: defaultPadding),
-          Hero(
-            tag: "login_btn",
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                "Login".toUpperCase(),
-              ),
-            ),
+          const SizedBox(height: defaultPadding / 2),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Sign Up".toUpperCase(), selectionColor: kPrimaryColor,),
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
+            login: false,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return const SignUpScreen();
+                    return const LoginScreen();
                   },
                 ),
               );
